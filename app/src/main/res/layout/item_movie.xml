@@ -2,42 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/ivPoster"
-        android:layout_width="116dp"
-        android:layout_height="212dp"
+        android:layout_width="162dp"
+        android:layout_height="193dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="-2dp"
+        android:layout_marginTop="1dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="248dp"
-        android:layout_height="51dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="6dp"
-        android:textColor="#3F51B5"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:text="Toy story 4" />
-
-    <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="286dp"
-        android:layout_height="154dp"
+        android:layout_width="wrap_content"
+        android:layout_height="134dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="60dp"
         android:text="Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called &quot;Forky&quot; to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy."
         android:textColor="#111010"
         android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="245dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_toEndOf="@id/ivPoster"
+        android:text="Toy story 4"
+        android:textColor="#1A237E"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

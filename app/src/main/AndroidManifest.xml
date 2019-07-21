@@ -3,8 +3,6 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.pascodev.flickster">
 
-
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DetailActivity"></activity>
         <activity android:name=".MovieActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
