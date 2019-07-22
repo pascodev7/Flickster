@@ -44,6 +44,13 @@ public class DetailActivity extends YouTubeBaseActivity {
         ratingBar = findViewById(R.id.ratingBar);
         youTubePlayerView = findViewById(R.id.player);
 
+
+        String title = getIntent().getStringExtra("title");
+        movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra("movie"));
+        tvTitle.setText(movie.getTitle());
+        tvOverview.setText(movie.getOverview());
+        ratingBar.setRating ((float)movie.getVoteAverage());
+
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(String.format(TRAILERS_API, movie.getMovieId()), new JsonHttpResponseHandler(){
             @Override
@@ -70,11 +77,7 @@ public class DetailActivity extends YouTubeBaseActivity {
 
 
 
-        String title = getIntent().getStringExtra("title");
-        movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra("movie"));
-        tvTitle.setText(movie.getTitle());
-        tvOverview.setText(movie.getOverview());
-        ratingBar.setRating ((float)movie.getVoteAverage());
+
     }
 
     private void initializeYoutube(final String youtubeKey) {
